@@ -1,0 +1,17 @@
+html body .container{
+    height: 100%''
+}
+
+body {
+    background-size: cover;
+    background-color: #c2e5f0;
+}
+
+h1 {
+    font-family: sans-serif, Arial;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+}
