@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <title>Coding Quiz</title>
+</head>
+
+<body class="">
+    <!-- Header that contains a link to historical scores (upper left) and displays the timer (upper right)  -->
+    <header class="">
+        <section class="">
+            <!-- Link to historical scores and link to return to quiz -->
+            <section class="">
+                <a href="#" id="highScoresLink" onclick="viewHighScores()">View High Scores</a>
+                <a href="#" id="backToStart" onclick="backToStart()">Go Back to Quiz</a>
+            </section>
+            <!-- Game clock display -->
+            <section id="gameClockContainer" class="">
+                Time: <span id="gameClock">0</span>
+            </section>
+        </section>
+    </header>
+    <!-- Container that will initially display a header with a start quiz button and will also display a form to allow the user to submit a highscore with their initials  -->
+    <section class="container">
+        <section class="">
+            <main class="">
+                <!-- Initial Display with h1 (header will also be used to display each question), brief text and a button that allows user to start the quiz -->
+                <h1 id="mainheading" class="">Coding Quiz Challenge</h1>
+                <section id="startMenu">
+                    <p>Test your knowledge of Javascript! Select the Start Quiz button to begin.</p>
+                    <button onclick="startQuiz()" class="">Start Quiz</button>
+                </section>
+                <!-- Form that allows the user to submit a highscore with their initials -->
+                <section id="enterInitialsForm" class="" style="display: none;">
+                    <h3>Enter your initials to save your score!</h3>
+                    <form>
+                        <input id="initialsInput" type="text" name="score">
+                        <button id="submitInitialsBtn">Submit Score</button>
+                    </form>
+                </section>
+                <!-- Placeholder for each questions possible answers -->
+                <section id="questionAnswers"></section>
+                <!-- Placeholder for high scores list -->
+                <section id="highScoresList"></section>
+            </main>
+        </section>
+    </section>
+
+    <!-- Linked JavaScript files -->
+    <script src="./Assets/JS/questions.js"></script>
+    <script src="./Assets/JS/script.js"></script>
+</body>
+</html>
