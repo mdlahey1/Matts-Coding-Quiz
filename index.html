@@ -29,20 +29,20 @@
         <section class="row justify-content-center">
             <main class="col-12 col-md-6">
                 <!-- Initial Display with h1 (header will also be used to display each question), brief text and a button that allows user to start the quiz -->
-                <h1 id="mainheading" class="mb-3">Javascript Quiz Challenge</h1>
+                <h1 id="questionHeader" class="mb-3">Javascript Quiz Challenge</h1>
                 <section id="startMenu">
                     <p class="mb-4">Test your knowledge of Javascript! Select the Start Quiz button to begin.</p>
                     <button onclick="startQuiz()" class="btn btn-outline-dark btn-lg">Start Quiz</button>
                 </section>
                 <!-- Form that allows the user to submit a highscore with their initials -->
-                <section id="enterInitialsForm" class="mb-3 py-4 border-seperatorBottom" style="display: none;">
+                <section id="initialsForm" class="mb-3 py-4 border-seperatorBottom" style="display: none;">
                     <h3>Enter your initials to save your score!</h3>
                     <form>
                         <input id="initialsInput" type="text" name="score"><button id="submitInitialsBtn" class="btn btn-outline-dark">Submit Score</button>
                     </form>
                 </section>
                 <!-- Placeholder for each questions possible answers -->
-                <section id="questionAnswers"></section>
+                <section id="choicesOptions"></section>
                 <!-- Placeholder for high scores list -->
                 <section id="highScoresList"></section>
             </main>
