@@ -1,10 +1,14 @@
+html {
+    background-image: linear-gradient(white, #6495ED);
+}
+
 html body .container{
     height: 100%;
 }
 
 body {
     background-size: cover;
-    background-color: #c2e5f0;
+    font-family: sans-serif, Arial;
 }
 
 h1 {
@@ -16,6 +20,19 @@ h3 {
 }
 
 a {
-    color: white;
+    color:#6495ED;
     font-weight: bold;
 }
+
+.border-seperatorBottom {
+    border-bottom: 2px solid white;
+}
+
+.border-seperatorTop {
+    border-top: 2 px solid white;
+}
+
+#initials-input {
+    border: 2 px solid black;
+}
+

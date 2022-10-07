@@ -9,37 +9,36 @@
   <title>Coding Quiz</title>
 </head>
 
-<body class="">
+<body class="h-100">
     <!-- Header that contains a link to historical scores (upper left) and displays the timer (upper right)  -->
-    <header class="">
-        <section class="">
+    <header class="container-fluid">
+        <section class="row mb-5 pt-4">
             <!-- Link to historical scores and link to return to quiz -->
-            <section class="">
+            <section class="col-12 col-md-6 pl-5">
                 <a href="#" id="highScoresLink" onclick="viewHighScores()">View High Scores</a>
-                <a href="#" id="backToStart" onclick="backToStart()">Go Back to Quiz</a>
+                <a href="#" id="backToStart" onclick="backToStart()" style="display: none;">Go Back to Quiz</a>
             </section>
             <!-- Game clock display -->
-            <section id="gameClockContainer" class="">
-                Time: <span id="gameClock">0</span>
+            <section id="gameClockContainer" class="col-12 col-md-6 text-right pr-5">
+                Time: <span id="gameClock">0</span> 
             </section>
         </section>
     </header>
     <!-- Container that will initially display a header with a start quiz button and will also display a form to allow the user to submit a highscore with their initials  -->
     <section class="container">
-        <section class="">
-            <main class="">
+        <section class="row justify-content-center">
+            <main class="col-12 col-md-6">
                 <!-- Initial Display with h1 (header will also be used to display each question), brief text and a button that allows user to start the quiz -->
-                <h1 id="mainheading" class="">Coding Quiz Challenge</h1>
+                <h1 id="mainheading" class="mb-3">Javascript Quiz Challenge</h1>
                 <section id="startMenu">
-                    <p>Test your knowledge of Javascript! Select the Start Quiz button to begin.</p>
-                    <button onclick="startQuiz()" class="">Start Quiz</button>
+                    <p class="mb-4">Test your knowledge of Javascript! Select the Start Quiz button to begin.</p>
+                    <button onclick="startQuiz()" class="btn btn-outline-dark btn-lg">Start Quiz</button>
                 </section>
                 <!-- Form that allows the user to submit a highscore with their initials -->
-                <section id="enterInitialsForm" class="" style="display: none;">
+                <section id="enterInitialsForm" class="mb-3 py-4 border-seperatorBottom" style="display: none;">
                     <h3>Enter your initials to save your score!</h3>
                     <form>
-                        <input id="initialsInput" type="text" name="score">
-                        <button id="submitInitialsBtn">Submit Score</button>
+                        <input id="initialsInput" type="text" name="score"><button id="submitInitialsBtn" class="btn btn-outline-dark">Submit Score</button>
                     </form>
                 </section>
                 <!-- Placeholder for each questions possible answers -->
