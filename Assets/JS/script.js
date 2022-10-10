@@ -7,7 +7,7 @@ var initialsForm = document.getElementById('initialsForm');
 var initialsInput = document.getElementById('initialsInput');
 var submitInitialsBtn = document.getElementById('submitInitialsBtn');
 var highScoresLink = document.getElementById('highScoresLink');
-var backToStart = document.getElementById('backToStart');
+var backToStartLink = document.getElementById('backToStartLink');
 var highScoresList = document.getElementById('highScoresList');
 
 // Set start variables for question number, number of questions, and question choices
@@ -46,7 +46,7 @@ function startQuiz() {
     startMenu.setAttribute("style", "display: none;");
     highScoresLink.setAttribute("style", "display: none;");
     initialsForm.setAttribute("style", "display: none;");
-    highScoresLink.setAttribute("style", "display: none;");
+    highScoresList.setAttribute("style", "display: none;");
     choicesOptions.setAttribute("style", "display: block;");
     choicesOptions.innerHTML = " ";
 
@@ -171,3 +171,92 @@ document.addEventListener("click", function(event) {
         }     
     }
 });
+
+//Function that stores initials/high scores in local storage if the user hits the submit button
+function enterInitials(event) {
+    event.preventDefault();
+    //Store the value the user enters in the initials input section into a new variable
+    var userInitials = initialsInput.value;
+
+    //Create object to hold user initials/final score
+    var userScores = {
+        initials: userInitials,
+        score: finalScore
+    };
+
+    //Add the most recent score to the high scores array
+    highScores.push(userScores);
+
+    //Convert the object into a string
+    var highScoresString = JSON.stringify(highScores);
+
+    //Store the high score in local storage
+    window.localStorage.setItem("high scores", highScoresString);
+
+    //Alert the user that their score has been entered and see if they want to play again
+    questionHeader.textContent = "Your score has been saved. Would you like to take the quiz again?";
+    initialsForm.setAttribute("style", "display: none;");
+    initialsInput.value = "";
+    choicesOptions.innerHTML = " ";
+}
+
+//Add event listener that add initials/score to local storage when the user hits the submit button
+submitInitialsBtn.addEventListener("click", enterInitials);
+
+//Function that displays the users high scores (listed from highest to lowest) if the user hits the "View High Scores" link in the upper left
+function viewHighScores() {
+    //Change the display so it has the high scores heading
+    highScoresList.innerHTML = " ";
+    highScoresList.setAttribute("style", "display: block;");
+    startMenu.setAttribute("style", "display: none;");
+    choicesOptions.setAttribute("style", "display: none;");
+    initialsForm.setAttribute("style", "display: none;");
+    questionHeader.textContent = "View High Scores:";
+    highScoresLink.setAttribute("style", "display: none;");
+    backToStartLink.setAttribute("style", "display: inline;");
+
+    //Store the high scores in local storage into a new variable
+    var listOfScores = window.localStorage.getItem("high scores");
+
+    //Convert scores from strings to an array of objects
+    var highScoresObject = JSON.parse(listOfScores);
+
+    //Sort scores from highest to lowest
+    highScoresObject.sort(highToLow);
+
+    //Go through the scores array and list each set of initials/scores
+    for (var i = 0; i <= highScores.length -1; i++) {
+        var scoreEntry = document.createElement("section");
+        scoreEntry.setAttribute("class", "alert alert-warning");
+        scoreEntry.innerHTML = "<span style='font-weight: bold;''>" + highScoresObject[i].initials + ":</span>" + " " + highScoresObject[i].score;
+        highScoresList.appendChild(scoreEntry);
+    }
+}
+
+//Function used to sort array of highest scores to lowest scores
+function highToLow(num1, num2) {
+    var score1 = num1.score;
+    var score2 = num2.score;
+    var comp = 0;
+
+    if (score1 > score2) {
+        comp = 1;
+    } else if (score1 < score2) {
+        comp = -1;
+    }
+
+    return comp * -1;
+
+}
+
+//Function that returns the user to the quiz start screen after they have looked at their high scores
+function backToStart() {
+    backToStartLink.setAttribute("style", "display: none;");
+    highScoresLink.setAttribute("style", "display: inline;");
+    startMenu.setAttribute("style", "display: block;");
+    highScoresList.setAttribute("style", "display: none;");
+    choicesOptions.setAttribute("style", "display: none;");
+    initialsForm.setAttribute("style", "display: none;");
+    questionHeader.textContent = "Javascript Quiz Challenge";
+}
+
