@@ -64,7 +64,7 @@ function listQuestion() {
     //Update question choices and create buttons
     for (var i = 0; i < questionChoices.length; i++) {
         var choiceBtn = document.createElement("button");
-        choiceBtn.setAttribute("class", "btn btn-outline-dark btn-sm d-block my-2 choice-btn");
+        choiceBtn.setAttribute("class", "btn btn-outline-dark btn-lg d-block my-2 choice-btn");
         choiceBtn.setAttribute("id", "choice-" + i);
         choiceBtn.textContent = questions[questionNumber].choices[i];
         choicesOptions.appendChild(choiceBtn);
