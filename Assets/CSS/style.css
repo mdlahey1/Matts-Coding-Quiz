@@ -1,5 +1,5 @@
 html {
-    background-image: linear-gradient(white, #6495ED);
+    background-image: linear-gradient(white, #1E90FF);
 }
 
 html body .container{
@@ -20,7 +20,7 @@ h3 {
 }
 
 a {
-    color:#6495ED;
+    color:#1E90FF;
     font-weight: bold;
 }
 
