@@ -102,7 +102,7 @@ function countdownClock() {
 function correctAnswer() {
     var correctNotification = document.createElement("section");
     correctNotification.setAttribute("class", "border-top mt-4 pt-4");
-    correctNotification.setAttribute("style", "font-size: 12px; color: green; font-weight: bold;");
+    correctNotification.setAttribute("style", "font-size: 16px; color: green; font-weight: bold;");
     correctNotification.textContent = "You selected the correct answer!";
     choicesOptions.appendChild(correctNotification);
 }
@@ -111,7 +111,7 @@ function correctAnswer() {
 function incorrectAnswer() {
     var incorrectNotification = document.createElement("section");
     incorrectNotification.setAttribute("class", "border-top mt-4 pt-4");
-    incorrectNotification.setAttribute("style", "font-size: 12px; color: red; font-weight: bold;");
+    incorrectNotification.setAttribute("style", "font-size: 16px; color: red; font-weight: bold;");
     incorrectNotification.textContent = "You selected an incorrect answer";
     choicesOptions.appendChild(incorrectNotification);
 }
