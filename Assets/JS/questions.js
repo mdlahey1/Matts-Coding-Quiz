@@ -1,6 +1,6 @@
 var questions = [
     {
-        title: "Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
+        title: "Which of the following functions of String object executes the search for a match between a regular expression and a specified string?",
         choices: ["concat()", "match()", "replace()", "search()"],
         answer: "search()"
     },
