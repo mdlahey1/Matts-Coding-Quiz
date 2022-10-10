@@ -9,3 +9,6 @@ var submitInitialsBtn = document.getElementById('submitInitialsBtn');
 var highScoresLink = document.getElementById('highScoresLink');
 var backToStart = document.getElementById('backToStart');
 var highScoresList = document.getElementById('highScoresList');
+
+
+
