@@ -105,6 +105,10 @@ function correctAnswer() {
     correctNotification.setAttribute("style", "font-size: 18px; color: green; font-weight: bold;");
     correctNotification.textContent = "Correct!";
     choicesOptions.appendChild(correctNotification);
+    //Clears out notification after a few seconds
+    setTimeout(() => {
+        correctNotification.style.display = 'none'        ;
+    }, 3000);
 }
 
 //Creates a function that notifies the user they chose an incorrect answer
@@ -114,6 +118,10 @@ function incorrectAnswer() {
     incorrectNotification.setAttribute("style", "font-size: 18px; color: red; font-weight: bold;");
     incorrectNotification.textContent = "Incorrect";
     choicesOptions.appendChild(incorrectNotification);
+    //Clears out notification after a few seconds
+    setTimeout(() => {
+        incorrectNotification.style.display = 'none'        ;
+    }, 3000);
 }
 
 //Create an event listener with a function to evaluate whether or not the user has chosen the correct answer and notifies them/moves on to the next question
