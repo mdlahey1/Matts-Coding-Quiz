@@ -7,8 +7,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-image: linear-gradient(white 30%, #1E90FF 70%); */
-    background-color: #4c8bf5;
+    background-image: linear-gradient(white, #4c8bf5);
 }
 
 h1 {
@@ -20,7 +19,7 @@ h3 {
 }
 
 a {
-    color:#1E90FF;
+    color:#4c8bf5;
     font-weight: bold;
 }
 
