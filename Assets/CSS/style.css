@@ -7,6 +7,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: top;
     background-image: linear-gradient(white, #4c8bf5);
 }
 
