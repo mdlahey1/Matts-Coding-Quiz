@@ -215,6 +215,15 @@ function viewHighScores() {
     highScoresLink.setAttribute("style", "display: none;");
     backToStartLink.setAttribute("style", "display: inline;");
 
+    //Create a button element that allows the user to clear the high scores
+    var clearBtn = document.createElement("button");
+    clearBtn.setAttribute("class", "btn btn-outline-dark btn-lg d-block my-2");
+    clearBtn.setAttribute("id", "clearBtn");
+    clearBtn.textContent = "Clear High Scores";
+    highScoresList.appendChild(clearBtn);
+    clearBtn.addEventListener("click", clearHighScores);
+
+
     //Store the high scores in local storage into a new variable
     var listOfScores = window.localStorage.getItem("high scores");
 
@@ -231,6 +240,11 @@ function viewHighScores() {
         scoreEntry.innerHTML = "<span style='font-weight: bold;''>" + highScoresObject[i].initials + ":</span>" + " " + highScoresObject[i].score;
         highScoresList.appendChild(scoreEntry);
     }
+}
+
+function clearHighScores() {
+    localStorage.clear();
+    viewHighScores();
 }
 
 //Function used to sort array of highest scores to lowest scores
