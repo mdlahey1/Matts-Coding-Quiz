@@ -107,7 +107,7 @@ function correctAnswer() {
     choicesOptions.appendChild(correctNotification);
     //Clears out notification after a few seconds
     setTimeout(() => {
-        correctNotification.style.display = 'none'        ;
+        correctNotification.style.display = 'none';
     }, 3000);
 }
 
@@ -120,7 +120,7 @@ function incorrectAnswer() {
     choicesOptions.appendChild(incorrectNotification);
     //Clears out notification after a few seconds
     setTimeout(() => {
-        incorrectNotification.style.display = 'none'        ;
+        incorrectNotification.style.display = 'none';
     }, 3000);
 }
 
