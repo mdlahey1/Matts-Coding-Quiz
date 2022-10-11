@@ -34,7 +34,7 @@ function renderHighScores() {
     }
 
     var scoresObject = JSON.parse(savedHighScores);
-    console.log("Saved High Scores: " + savedHighScores);
+    //console.log("Saved High Scores: " + savedHighScores);
     highScores = scoresObject;
 }
 
