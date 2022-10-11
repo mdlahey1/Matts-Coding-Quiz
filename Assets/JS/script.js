@@ -215,7 +215,7 @@ function viewHighScores() {
     highScoresLink.setAttribute("style", "display: none;");
     backToStartLink.setAttribute("style", "display: inline;");
 
-    //Create a button element that allows the user to clear the high scores
+    //Create a button element that allows the user to clear high scores
     var clearBtn = document.createElement("button");
     clearBtn.setAttribute("class", "btn btn-outline-dark btn-lg d-block my-2");
     clearBtn.setAttribute("id", "clearBtn");
@@ -242,6 +242,7 @@ function viewHighScores() {
     }
 }
 
+//Function used to clear high scores/reload high scores screen
 function clearHighScores() {
     localStorage.clear();
     viewHighScores();
