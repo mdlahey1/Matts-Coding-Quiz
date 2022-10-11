@@ -244,8 +244,10 @@ function viewHighScores() {
 
 //Function used to clear high scores/reload high scores screen
 function clearHighScores() {
-    localStorage.clear();
+    localStorage.removeItem("high scores");
+    location.reload();
     viewHighScores();
+    highScores = [];
 }
 
 //Function used to sort array of highest scores to lowest scores
