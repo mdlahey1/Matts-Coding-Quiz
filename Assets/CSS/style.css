@@ -24,14 +24,14 @@ a {
 }
 
 .border-seperatorBottom {
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
 }
 
 .border-seperatorTop {
-    border-top: 2 px solid white;
+    border-top: 3px solid white;
 }
 
 #initialsInput {
-    border: 2 px solid black;
+    border: 2px solid black;
 }
 
