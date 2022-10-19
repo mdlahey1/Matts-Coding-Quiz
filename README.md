@@ -11,4 +11,4 @@ alt="Coding Quiz Start Page" class="float-left" />
 https://mdlahey1.github.io/Matts-Coding-Quiz/
 
 ## Link to GitHub Repository
-https://github.com/mdlahey1/matthew-lahey-password-generator
+https://github.com/mdlahey1/Matts-Coding-Quiz
